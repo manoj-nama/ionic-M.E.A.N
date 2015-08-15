@@ -1,0 +1,87 @@
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../fonts/RobotoSlab-Thin-webfont.eot?v=2.0.1");
+  src: url("../fonts/RobotoSlab-Thin-webfont.eot?v=2.0.1#iefix") format("embedded-opentype"),
+  url("../fonts/RobotoSlab-Thin-webfont.ttf?v=2.0.1") format("truetype"),
+  url("../fonts/RobotoSlab-Thin-webfont.woff?v=2.0.1") format("woff"),
+  url("../fonts/RobotoSlab-Thin-webfont.woff") format("woff"),
+  url("../fonts/RobotoSlab-Thin-webfont.svg?v=2.0.1#RobotoSlab") format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../fonts/RobotoSlab-Light-webfont.eot?v=2.0.1");
+  src: url("../fonts/RobotoSlab-Light-webfont.eot?v=2.0.1#iefix") format("embedded-opentype"),
+  url("../fonts/RobotoSlab-Light-webfont.ttf?v=2.0.1") format("truetype"),
+  url("../fonts/RobotoSlab-Light-webfont.woff?v=2.0.1") format("woff"),
+  url("../fonts/RobotoSlab-Light-webfont.woff") format("woff"),
+  url("../fonts/RobotoSlab-Light-webfont.svg?v=2.0.1#RobotoSlab") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../fonts/RobotoSlab-Regular-webfont.eot?v=2.0.1");
+  src: url("../fonts/RobotoSlab-Regular-webfont.eot?v=2.0.1#iefix") format("embedded-opentype"),
+  url("../fonts/RobotoSlab-Regular-webfont.ttf?v=2.0.1") format("truetype"),
+  url("../fonts/RobotoSlab-Regular-webfont.woff?v=2.0.1") format("woff"),
+  url("../fonts/RobotoSlab-Regular-webfont.woff") format("woff"),
+  url("../fonts/RobotoSlab-Regular-webfont.svg?v=2.0.1#RobotoSlab") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../fonts/RobotoSlab-Bold-webfont.eot?v=2.0.1");
+  src: url("../fonts/RobotoSlab-Bold-webfont.eot?v=2.0.1#iefix") format("embedded-opentype"),
+  url("../fonts/RobotoSlab-Bold-webfont.ttf?v=2.0.1") format("truetype"),
+  url("../fonts/RobotoSlab-Bold-webfont.woff?v=2.0.1") format("woff"),
+  url("../fonts/RobotoSlab-Bold-webfont.woff") format("woff"),
+  url("../fonts/RobotoSlab-Bold-webfont.svg?v=2.0.1#RobotoSlab") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "Roboto Slab", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+}
+.ion-navicon:before {
+  width: 14px;
+  overflow: hidden;
+}
+.menu-open .menu-animated {
+  transform: translate3d(240px, 0, 0) scale(0.8) !important;
+}
+.menu-content {
+  box-shadow: none;
+}
+.list .item {
+  border: 0;
+}
+.menu .list .item-complex .item-content, .item-radio .item-content,
+.menu .list .item,
+.view,
+.menu {
+  background-color: #333;
+}
+.menu .list .item-complex .item-content, .item-radio .item-content,
+.menu .list .item {
+  color: #fff;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.menu .ionic-scroll > div.scroll {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  z-index: 9;
+  margin: auto;
+  width: 275px;
+  height: 400px;
+}
+
+.active-menu > a {background-color: #222222 !important;}
+.scroll-bar-v { width: 0;}
