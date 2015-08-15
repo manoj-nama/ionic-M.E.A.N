@@ -16,5 +16,15 @@ This app also uses underlying device features using `ngCordova`. Following plugi
 * `cordova-plugin-console` (_default_)
 * `cordova-plugin-whitelist` (_default_)
 * `com-ionic-keyboard` (_default_)
-* `cordova-plugin-statusbar`
-* `cordova-plugin-local-notifications`
+* `cordova-plugin-statusbar` [Statusbar](http://ngcordova.com/docs/plugins/statusbar/)
+* `cordova-plugin-local-notifications` [Local Notifications](http://ngcordova.com/docs/plugins/localNotification/)
+
+##Setting up
+
+0. `npm install -g ionic cordova`
+1. clone the repo `git clone git@github.com:manoj-nama/ionic-M.E.A.N.git`
+2. cd `ionic-M.E.A.N` && `bower install`
+3. Add desired platform. i.e `ionic platform add android` or `ionic platform add ios` (_Requires SDK to be present_)
+4. Install the above non-default plugins (_refer to the links on how to install_)
+5. `ionic build android` or `ionic build ios`
+6. `ionic run android` | `ionic run ios` (_connect device to run in device directly_)
