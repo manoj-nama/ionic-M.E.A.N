@@ -33,6 +33,16 @@ angular.module('MEAN', ['ionic'])
           controllerAs: 'dashboard'
         }
       }
+    })
+    .state('app.bootcamp', {
+      url: '/bootcamp',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/bootcamp.list.html',
+          controller: 'BootcampCtrl',
+          controllerAs: 'bootcamp'
+        }
+      }
     });
 
   // if none of the above states are matched, use this as the fallback
