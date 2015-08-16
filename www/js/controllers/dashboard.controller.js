@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module("MEAN")
-  .controller("DashboardCtrl", function ($scope) {
+  .controller("DashboardCtrl", function ($scope, $state) {
     var DashboardCtrl= this;
 
-    DashboardCtrl.items = [
+    $scope.items = [
       {id: 1, text: "Bootcamp meeting", time: +new Date(), type: "cal"},
       {id: 2, text: "JS Channel", time: +new Date(), type: "meet"},
       {id: 3, text: "CV-GUI Standup", time: +new Date(), type: "standup"},
@@ -24,6 +24,8 @@ angular.module("MEAN")
       {id: 17, text: "Growth Framework", time: +new Date(), type: "cal"}
     ];
 
-    $scope.items = DashboardCtrl.items;
+    $scope.navigateToBootcamp = function () {
+      $state.go("app.bootcamp");
+    };
 
   });

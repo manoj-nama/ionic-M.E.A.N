@@ -1,7 +1,8 @@
 <ion-view class="app-page">
   <ion-content has-bouncing="true">
     <ion-list class="dashboard-list">
-      <ion-item class="{{item.type}} dashboard-item item" ng-repeat="item in items track by item.id">
+      <ion-item ng-click="navigateToBootcamp()" class="{{item.type}} dashboard-item item"
+                ng-repeat="item in items track by item.id">
         <div class="meeting-title">{{item.text}}</div>
         <span class="time">{{item.time | date: 'medium'}}</span>
         <paper-ripple></paper-ripple>
