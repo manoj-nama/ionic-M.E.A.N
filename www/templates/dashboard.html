@@ -1,5 +1,10 @@
-<ion-view>
-  <ion-content>
-    <h1>Dashboard</h1>
+<ion-view class="app-page" title="M.E.A.N">
+  <ion-content has-bouncing="true">
+    <ion-list class="dashboard-list">
+      <ion-item class="{{item.type}} dashboard-item item" ng-repeat="item in items track by item.id">
+        <div class="meeting-title">{{item.text}}</div>
+        <span class="time">{{item.time | date: 'medium'}}</span>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
