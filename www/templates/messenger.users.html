@@ -1,0 +1,13 @@
+<ion-view class="app-page messenger">
+  <ion-content has-bouncing="true">
+    <ion-list class="dashboard-list">
+      <ion-item class="dashboard-item item no-pad" ng-repeat="user in users">
+        <a class="item item-avatar" data-ui-sref="app.chat({id: $index})">
+          <img src="img/ionic.png">
+          <div>{{user.name}}</div>
+          <p>{{user.lastMsg}}</p>
+        </a>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -9,10 +9,19 @@ angular.module('MEAN', ['ionic'])
     if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
-    if(window.StatusBar) {
-      StatusBar.hide();
-    }
+    ionic.Platform.isFullScreen = true;
+    window.addEventListener('native.keyboardshow', kbdHandler);
+    window.addEventListener('native.keyboardhide', kbdHandler);
   });
+    function kbdHandler(e) {
+      if(e.keyboardHeight) {
+        var el = document.querySelector(".mean-app-view"),
+          hgt = el.offsetHeight - e.keyboardHeight;
+        document.querySelector(".mean-app-view").style.height = (hgt + 50) + "px";
+      } else {
+        document.querySelector(".mean-app-view").style.height = "100%";
+      }
+    }
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -41,6 +50,26 @@ angular.module('MEAN', ['ionic'])
           templateUrl: 'templates/bootcamp.list.html',
           controller: 'BootcampCtrl',
           controllerAs: 'bootcamp'
+        }
+      }
+    })
+    .state('app.messenger', {
+      url: '/messenger',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/messenger.users.html',
+          controller: 'MessengerCtrl',
+          controllerAs: 'messenger'
+        }
+      }
+    })
+    .state('app.chat', {
+      url: '/chat/:id',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/messenger.chat.html',
+          controller: 'MessengerCtrl',
+          controllerAs: 'chat'
         }
       }
     });

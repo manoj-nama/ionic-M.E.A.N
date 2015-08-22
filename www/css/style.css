@@ -47,6 +47,9 @@
 body {
   font-family: "Roboto Slab", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
 }
+.mean-app-view { height: 100%; }
+body.kbd-open > .mean-app-view { height: 50%; }
+
 .ion-navicon:before {
   width: 14px;
   overflow: hidden;
@@ -96,6 +99,7 @@ body {
 }
 .dashboard-item {
   width: 95%;
+  font-family: 'Roboto Slab';
   margin: 0 auto;
   font-size: 1.5em;
   line-height: 1em;
@@ -109,6 +113,7 @@ body {
   margin-bottom: 10px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
+.dashboard-item.no-pad { padding: 0;}
 .dashboard-item:nth-child(1) { margin-top: 10px;}
 .dashboard-item .time {
   font-size: 0.6em;
@@ -122,3 +127,75 @@ body {
 .dashboard-item.cal paper-ripple { color: darkgreen; }
 .dashboard-item.meet paper-ripple { color: dodgerblue; }
 .dashboard-item.standup paper-ripple { color: orangered; }
+
+/* Messenger */
+.chatter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+.messenger-chat-list {
+  height: calc(100% - 94px);
+}
+.chat-list > .list > .item {
+  background-color: #eee; padding: 5px 10px;
+  margin-bottom: 10px;
+}
+.chat-list .list {position: relative;}
+.chat-list .chat-item {
+  font-size: 1em;
+  margin: 0;
+  background-color: #fff;
+  max-width: 60%;
+  padding: 10px;
+  width: auto;
+  min-width: 20%;
+  border-radius: 5px;
+  border: 0;
+  word-break: break-word;
+  white-space: normal;
+  font-weight: 300;
+  line-height: 1.3em;
+}
+.chat-list .chat-item.friend {
+  background-color: #fff;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+  border-top: 2px solid #fb0;
+}
+.chat-list .chat-item.self {
+  background-color: #ddd;
+  border-bottom: 2px solid #bbb;
+}
+.chat-list .chat-cont.item:after, .chat-list .chat-cont.item:before {
+  content: " ";
+  width: 0;
+  position: absolute;
+  z-index: 2;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+
+}
+.chat-list .chat-cont.item.self:after {
+  border-top: 5px solid #bbb;
+  right: 20px;
+  bottom: 0;
+}
+.chat-list .chat-cont.item.friend:before {
+  border-bottom: 5px solid #fb0;
+  left: 20px;
+  top: 0;
+}
+.chat-list .chat-item.self {float: right;}
+.chat-list .chat-item.friend {float: left;}
+.chat-list .chat-item .time {
+  font-size: 0.6em;
+  color: #888;
+}
+.chatter .chatter-input {
+  height: 40px !important;
+  font-family: 'Roboto Slab', serif;
+}
+/*.messenger > .scroll-content > .scroll { height: 100%; }*/
+/*.chat-list, .chat-list > .list {height: calc(100% - 50px);}*/
